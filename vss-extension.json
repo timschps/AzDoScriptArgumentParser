@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "ScriptArgumentParser",
+    "name": "Script Argument Parser",
+    "version": "0.1.4",
+    "publisher": "timschaeps",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "This task parses optional, predefined parameters to one PowerShell argument",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "ScriptArgumentParser/icon.png"        
+    },
+    "files": [
+        {
+            "path": "ScriptArgumentParser"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "ScriptArgumentParser",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "ScriptArgumentParser"
+            }
+        }
+    ]
+}
