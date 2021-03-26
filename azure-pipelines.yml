@@ -39,5 +39,11 @@ steps:
     extensionVersion: '$(GitVersion.Major).$(GitVersion.Minor).$(GitVersion.PreReleaseNumber)'
     updateTasksVersion: true
     extensionVisibility: 'private_preview'
-
+- task: PublishAzureDevOpsExtension@3
+  inputs:
+    connectTo: 'VsTeam'
+    connectedServiceName: 'Marketplace connection tim schaeps'
+    fileType: 'vsix'
+    vsixFile: 'timschaeps.ScriptArgumentParser-*.*.*.vsix'
+    updateTasksVersion: false
 
