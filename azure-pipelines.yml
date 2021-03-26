@@ -18,7 +18,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
+- task: GitVersion@5
+  inputs:
+    runtime: 'core'
 
 - task: PackageAzureDevOpsExtension@3
   inputs:
