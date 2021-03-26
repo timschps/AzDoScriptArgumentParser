@@ -36,7 +36,7 @@ steps:
     publisherId: 'timschaeps'
     extensionId: 'ScriptArgumentParser'
     extensionName: 'Script Argument Parser'
-    extensionVersion: '$(gitversion)'
+    extensionVersion: '$(GitVersion.MajorMinorPatch).$(PreReleaseNumber )'
     updateTasksVersion: true
     extensionVisibility: 'private_preview'
 
