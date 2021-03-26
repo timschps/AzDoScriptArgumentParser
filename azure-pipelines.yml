@@ -26,6 +26,10 @@ steps:
   inputs:
     useConfigFile: true
     configFilePath: GitVersion.yml
+
+- task: TfxInstaller@3
+  inputs:
+    version: '>=v0.7.x'
 - task: PackageAzureDevOpsExtension@3
   inputs:
     rootFolder: './'
