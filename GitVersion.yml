@@ -1,0 +1,11 @@
+branches:
+  
+  main: 
+    regex: main 
+    mode: ContinuousDeployment
+    tag: 'pre'
+    increment: patch
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+ignore:
+  sha: []
