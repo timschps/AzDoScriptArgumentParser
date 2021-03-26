@@ -17,3 +17,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+
+
+- task: PackageAzureDevOpsExtension@3
+  inputs:
+    rootFolder: './'
+    publisherId: 'timschaeps'
+    extensionId: 'ScriptArgumentParser'
+    extensionName: 'Script Argument Parser'
+    extensionVersion: '$(gitversion)'
+    updateTasksVersion: true
+    extensionVisibility: 'private_preview'
+
