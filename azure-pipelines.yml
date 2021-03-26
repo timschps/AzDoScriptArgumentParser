@@ -20,7 +20,8 @@ steps:
 
 - task: GitVersion@5
   inputs:
-    runtime: 'core'
+    runtime: full
+    preferBundledVersion: true
 
 - task: PackageAzureDevOpsExtension@3
   inputs:
