@@ -47,7 +47,7 @@ try {
     $VarableValue = [Environment]::GetEnvironmentVariable($VariableName)
     if($VarableValue){ 
         Write-Host "Progress: Variable with name '$VariableName' specified on buildlevel (The value is: $VarableValue) , adding this value to the argumentstring"
-        $parsedArguments = $parsedArguments + " -$VariableNameInTool $VarableValue"
+        $parsedArguments = $parsedArguments + " -$VariableNameInTool=""$VarableValue"""
         Set-VstsTaskVariable -Name $ParsedArgumentListName -Value $parsedArguments
         Write-Host "Progress: The result of this change is now: $parsedArguments"
         }else{
