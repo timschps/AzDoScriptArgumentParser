@@ -18,10 +18,11 @@
     },
     "files": [
         {
-            "path": "src/ScriptArgumentParser"
-        },
-        {
-            "path": "src/OptionalVariableParser"
+            "path": "src/ScriptArgumentParser",
+            "packagePath": "ScriptArgumentParser"
+        },{
+            "path": "src/OptionalVariableParser",
+            "packagePath": "OptionalVariableParser"
         }
     ],
     "contributions": [
