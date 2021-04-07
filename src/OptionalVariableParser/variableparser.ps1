@@ -25,10 +25,11 @@ try {
     $ParsedVariableName = Get-VstsInput -Name ParsedVariableName -Require
 
     Write-Host "-----------------------------------------------------"
-    Write-Host "This task allows you to build an argument list for a script in this build. You can specify (optional) variables that can be passed to the build
-    and that can be parsed to the argumentlist that you can specify in the variable 'ParsedArgumentListName' of this task"
+    Write-Host "This task allows you to specify an optional variable that you can specify on build level. when specified," 
+    Write-Host "it will override the default value that can also be specified here." 
+    
     Write-Host "This task will try to retreive a value for variable: '$VariableName'"
-    Write-Host "So, if you want to modify an optional script argument in the script you are going to call, 
+    Write-Host "So, if you want to modify the optional variable, 
     then all you need to do is to specify a build variable (with name $VariableName) and give it a value!"
     Write-Host "-----------------------------------------------------"
     

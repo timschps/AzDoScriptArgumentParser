@@ -29,7 +29,7 @@
     {
       "name": "DefaultValue",
       "type": "string",
-      "label": "",
+      "label": "DefaultValue",
       "required": true,
       "helpMarkDown": ""
     },
