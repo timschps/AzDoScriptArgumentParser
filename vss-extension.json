@@ -14,11 +14,11 @@
         "Azure Pipelines"
     ],
     "icons": {
-        "default": "ScriptArgumentParser/icon.png"        
+        "default": "icon.png"        
     },
     "files": [
         {
-            "path": "ScriptArgumentParser"
+            "path": "src"
         }
     ],
     "contributions": [
