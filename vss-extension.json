@@ -18,7 +18,10 @@
     },
     "files": [
         {
-            "path": "src"
+            "path": "src/ScriptArgumentParser"
+        },
+        {
+            "path": "src/OptionalVariableParser"
         }
     ],
     "contributions": [
