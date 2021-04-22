@@ -40,11 +40,10 @@ try {
     Write-Host "-----------------------------------------------------"
     Write-Host "Progress: Checking if variable '$VariableName' has been specified in the build variables"
     $VariableValue = [Environment]::GetEnvironmentVariable($VariableName)
-    if($VarableValue){ 
-        $VariableValue = $VarableValue
+    if($VariableValue){ 
         Write-Host "I found build variable with name: $VariableName. The value is $VariableValue"
         }else{
-        $VarableValue = $DefaultValue
+        $VariableValue = $DefaultValue
         Write-Host "I found no build variable with name: $VariableName."
         }
         Write-Host "-----------------------------------------------------"
