@@ -54,7 +54,7 @@ try {
             $spacer = " "
         }
         if (([string]::IsNullOrEmpty($VariableBinder)) ) {
-            $binder = "="
+            $binder = " "
         }else{
             $binder = $VariableBinder
         }

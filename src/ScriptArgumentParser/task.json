@@ -14,7 +14,7 @@
   "version": {
     "Major": "0",
     "Minor": "1",
-    "Patch": "33"
+    "Patch": "34"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "ScriptArgumentParser $(VariableName)",
@@ -31,7 +31,7 @@
       "type": "string",
       "label": "The string that binds together the Variablename and Variable value",
       "required": false,
-      "helpMarkDown": "Defaults to ="
+      "helpMarkDown": "Defaults to a space between parameter and value"
     },
     {
       "name": "VariableNameInTool",
