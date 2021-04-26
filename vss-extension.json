@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "ScriptArgumentParser",
     "name": "Script Argument Parser",
-    "version": "0.1.8",
+    "version": "0.1.33",
     "publisher": "timschaeps",
     "targets": [
         {
