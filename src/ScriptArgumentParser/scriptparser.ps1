@@ -23,6 +23,7 @@ try {
     $VariableName = Get-VstsInput -Name VariableName -Require
     $VariableNameInTool = Get-VstsInput -Name VariableNameInTool -Require
     $ParsedArgumentListName = Get-VstsInput -Name ParsedArgumentListName -Require
+    $VariableBinder = Get-VstsInput -Name VariableBinder
     $parsedArguments = Get-VstsTaskVariable -Name $ParsedArgumentListName
 
     Write-Host "-----------------------------------------------------"
@@ -48,11 +49,17 @@ try {
     if($VarableValue){ 
         Write-Host "Progress: Variable with name '$VariableName' specified on buildlevel (The value is: $VarableValue) , adding this value to the argumentstring"
         $spacer = ""
+        $binder = "=";
         if ( -not ([string]::IsNullOrEmpty($parsedArguments)) ) {
             $spacer = " "
         }
+        if (([string]::IsNullOrEmpty($VariableBinder)) ) {
+            $binder = "="
+        }else{
+            $binder = $VariableBinder
+        }
         
-        $parsedArguments = $parsedArguments + $spacer +"-$VariableNameInTool=""$VarableValue"""
+        $parsedArguments = $parsedArguments + $spacer +"-$VariableNameInTool"+$binder+"""$VarableValue"""
         Set-VstsTaskVariable -Name $ParsedArgumentListName -Value $parsedArguments
         Write-Host "Progress: The result of this change is now: $parsedArguments"
         }else{
@@ -64,7 +71,7 @@ try {
     Write-Host "-----------------------------------------------------"
     Write-Host "Here is a resume of what I found/did:"
     Write-Host "I had to look for a build variable with name: $VariableName"
-    Write-Host "I had to use it in the script argumetn list ($ParsedArgumentListName)"
+    Write-Host "I had to use it in the script argument list ($ParsedArgumentListName)"
     if($VarableValue){
         Write-Host "I found the variable ($VariableName) and it had the following value: $VarableValue"
         Write-Host "It is used in the argument list ($ParsedArgumentListName) and this is the result: $parsedArguments"

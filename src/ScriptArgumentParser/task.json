@@ -27,6 +27,13 @@
       "helpMarkDown": "The variable that needs to be checked in the build variables, needs to be something understandable"
     },
     {
+      "name": "VariableBinder",
+      "type": "string",
+      "label": "The string that binds together the Variablename and Variable value",
+      "required": false,
+      "helpMarkDown": "Defaults to ="
+    },
+    {
       "name": "VariableNameInTool",
       "type": "string",
       "label": "Variable Name In Tool for which we are building the argumentlist",
