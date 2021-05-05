@@ -14,7 +14,7 @@
   "version": {
     "Major": "0",
     "Minor": "1",
-    "Patch": "34"
+    "Patch": "35"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "ScriptArgumentParser $(VariableName)",
@@ -33,6 +33,13 @@
       "required": false,
       "helpMarkDown": "Defaults to a space between parameter and value"
     },
+    {
+      "name": "DefaultValue",
+      "type": "string",
+      "label": "Default Value (Optional)",
+      "required": false,
+      "helpMarkDown": "You can specify a default value if you want: it will be set when no variable with VariableName is defined in the pipeline"
+    }    ,
     {
       "name": "VariableNameInTool",
       "type": "string",

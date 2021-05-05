@@ -24,6 +24,7 @@ try {
     $VariableNameInTool = Get-VstsInput -Name VariableNameInTool -Require
     $ParsedArgumentListName = Get-VstsInput -Name ParsedArgumentListName -Require
     $VariableBinder = Get-VstsInput -Name VariableBinder
+    $optionalDefaultValue = Get-VstsInput -Name DefaultValue
     $parsedArguments = Get-VstsTaskVariable -Name $ParsedArgumentListName
 
     Write-Host "-----------------------------------------------------"
@@ -46,6 +47,13 @@ try {
     
     Write-Host "Progress: Checking if variable '$VariableName' has been specified in the build variables"
     $VarableValue = [Environment]::GetEnvironmentVariable($VariableName)
+    if (!$VarableValue -and $optionalDefaultValue) {
+        Write-Host "There was no variable with name $VariableName specified in the pipeline, but there is a defaultvalue ($optionalDefaultValue)"
+        Write-Host "  -> So working with this value"
+        $VarableValue = $optionalDefaultValue
+    }
+
+
     if($VarableValue){ 
         Write-Host "Progress: Variable with name '$VariableName' specified on buildlevel (The value is: $VarableValue) , adding this value to the argumentstring"
         $spacer = ""
