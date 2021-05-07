@@ -20,7 +20,7 @@ Well, I already hear you thinking, why would I need such a thing? Well, to me it
 ## Example: Cake
 If you work with the [Cake Build](https://www.cakebuild.net) build system, then you will be most likely aware that your `build.cake` file can contain arguments that can be overridden at time of execution. All your build logic resides in that file and you most likely would like to keep it like that. When running that script, you can run it without arguments and then it will work with the defaults that have been defined by the end user (you). 
 
-But if you want a second build pipeline that does something different, but still with the same Cake file, then you can achieve this with an argument that is passed to the cake file. If you want to be able to support it without this extension, then you would have to come up with a second `azure-pipelines.yml` file, which passes the variable. This means that you would have to set up another `azure-pipelines.yml` file, just for this reason, which is a shame as your logic get scattered all over the place!
+But if you want a second build pipeline that does something different, but still with the same Cake file, then you can achieve this with an argument that is passed to the cake file. If you want to be able to support it without this extension, then you would have to come up with a second `azure-pipelines.yml` file, which passes the variable. This means that you would have to set up another `azure-pipelines.yml` file, just for this reason, which is a shame as your logic get scattered all over the place! With this approach, you can focus on your (important) work, while still having the possibility to be flexible
 
 # How?
 
