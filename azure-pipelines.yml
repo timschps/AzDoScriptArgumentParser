@@ -27,7 +27,7 @@ steps:
     rootFolder: './'
     publisherId: 'timschaeps'
     extensionId: 'ScriptArgumentParser'
-    extensionName: 'Script Argument Parser'
+#    extensionName: 'Script Argument Parser'
     extensionVersion: '$(GitVersion.Major).$(GitVersion.Minor).$(GitVersion.PreReleaseNumber)'
     updateTasksVersion: true
     extensionVisibility: 'public'

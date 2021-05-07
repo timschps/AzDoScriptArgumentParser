@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "ScriptArgumentParser",
     "name": "Variable/Argument Parser",
-    "version": "0.1.35",
+    "version": "0.1.40",
     "publisher": "timschaeps",
     "targets": [
         {
