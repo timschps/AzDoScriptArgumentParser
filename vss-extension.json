@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "ScriptArgumentParser",
-    "name": "Script Argument Parser",
+    "name": "Variable/Argument Parser",
     "version": "0.1.35",
     "publisher": "timschaeps",
     "targets": [
@@ -9,9 +9,9 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "This task parses optional, predefined parameters to one PowerShell argument",
+    "description": "This extension helps with the parsing of predefined (optional) script arguments/parameters",
     "categories": [
-        "Azure Pipelines"
+        "Azure Pipelines", "PowerShell"
     ],
     "icons": {
         "default": "icon.png"        
