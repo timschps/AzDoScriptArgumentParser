@@ -10,14 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - task: gitversion/setup@0
   inputs:
     versionSpec: '5.6.6'
@@ -38,7 +30,7 @@ steps:
     extensionName: 'Script Argument Parser'
     extensionVersion: '$(GitVersion.Major).$(GitVersion.Minor).$(GitVersion.PreReleaseNumber)'
     updateTasksVersion: true
-    extensionVisibility: 'private_preview'
+    extensionVisibility: 'public'
 - task: PublishAzureDevOpsExtension@3
   inputs:
     connectTo: 'VsTeam'
