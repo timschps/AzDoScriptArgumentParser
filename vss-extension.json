@@ -11,7 +11,7 @@
     ],    
     "description": "This extension helps with the parsing of predefined (optional) script arguments/parameters",
     "categories": [
-        "Azure Pipelines", "PowerShell"
+        "Azure Pipelines"
     ],
     "icons": {
         "default": "icon.png"        
