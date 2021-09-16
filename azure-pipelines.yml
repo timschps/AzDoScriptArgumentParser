@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Default
+  vmImage: ubuntu-latest
 
 steps:
 - task: gitversion/setup@0
@@ -30,9 +30,17 @@ steps:
 - task: PackageAzureDevOpsExtension@3
   inputs:
     rootFolder: './'
-    publisherId: 'pierredeconynck'
-    extensionId: 'ScriptArgumentParserTst'
+    publisherId: 'timschaeps'
+    extensionId: 'ScriptArgumentParser'
+#    extensionName: 'Script Argument Parser'
     extensionVersion: '$(GitVersion.Major).$(GitVersion.Minor).$(GitVersion.PreReleaseNumber)'
     updateTasksVersion: true
     extensionVisibility: 'public'
+- task: PublishAzureDevOpsExtension@3
+  inputs:
+    connectTo: 'VsTeam'
+    connectedServiceName: 'Marketplace connection tim schaeps'
+    fileType: 'vsix'
+    vsixFile: 'timschaeps.ScriptArgumentParser-*.*.*.vsix'
+    updateTasksVersion: false
 
