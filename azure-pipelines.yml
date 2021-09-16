@@ -22,7 +22,8 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'npm install --only=prod'
+    customCommand: 'install --only=prod'
+    workingDir: './src/'
 - task: TfxInstaller@3
   inputs:
     version: '>=v0.7.x'
