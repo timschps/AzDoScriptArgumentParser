@@ -23,6 +23,7 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'install --only=prod'
+    workingDir: './src/'
 - task: TfxInstaller@3
   inputs:
     version: '>=v0.7.x'
