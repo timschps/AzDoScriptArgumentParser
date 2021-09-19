@@ -56,8 +56,8 @@
     }
   ],
   "execution": {
-    "PowerShell3": {
-      "target": "scriptparser.ps1"
+    "Node": {
+      "target": "scriptparser.js"
     }
   }
 }

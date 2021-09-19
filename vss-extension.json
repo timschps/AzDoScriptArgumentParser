@@ -25,9 +25,18 @@
         {
             "path": "src/ScriptArgumentParser",
             "packagePath": "ScriptArgumentParser"
-        },{
+        },
+        {
+            "path": "src/node_modules",
+            "packagePath": "ScriptArgumentParser/node_modules"
+        },
+        {
             "path": "src/OptionalVariableParser",
             "packagePath": "OptionalVariableParser"
+        },
+        {
+            "path": "src/node_modules",
+            "packagePath": "OptionalVariableParser/node_modules"
         }
     ],
     "contributions": [

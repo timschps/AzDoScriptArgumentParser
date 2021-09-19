@@ -42,8 +42,8 @@
     }
   ],
   "execution": {
-    "PowerShell3": {
-      "target": "variableparser.ps1"
+    "Node": {
+      "target": "variableparser.js"
     }
   }
 }
